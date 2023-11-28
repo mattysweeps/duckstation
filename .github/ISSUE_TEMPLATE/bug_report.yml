@@ -6,13 +6,13 @@ body:
   attributes:
     value: |
       **Please read before creating a new bug report:**
-      1. Make sure there is not already an issue for this bug by [searching in **both** open and closed issues](https://github.com/stenzek/duckstation/issues?q=is%3Aissue+sort%3Aupdated-desc+).
+      1. Make sure there is not already an issue for this bug by [searching in **both** open and closed issues](https://github.com/mattysweeps/duckstation/issues?q=is%3Aissue+sort%3Aupdated-desc+).
       2. All enhancements **must** be off. To quickly disable all enhancements with affecting your normal configuration, you can check **Disable All Enhancements** in Advanced Options.
       3. All advanced options **must** be at their default values.
       4. No cheats may be active. If you were using cheats, they should be disabled, and the game must be rebooted before reporting the bug.
       5. Do not share save state files. (Sharing memory card files is OK.)
       6. Verify your BIOS and game dumps, as we can not assist with issues resulting from bad dumps.
-      7. If playing PAL region software, please check whether or not the game has LibCrypt protection. If it does, make sure you have a [correct SBI file](https://github.com/stenzek/duckstation#libcrypt-protection-and-sbi-files).
+      7. If playing PAL region software, please check whether or not the game has LibCrypt protection. If it does, make sure you have a [correct SBI file](https://github.com/mattysweeps/duckstation#libcrypt-protection-and-sbi-files).
       8. Please post your bug report in English, as this is the only language spoken by the developers. The [Discord server](https://discord.gg/Buktv3t) has many helpful people if you need help translating.
       9. Issues about the libretro core will be deleted (you will be blocked from the repository if you create such an issue). That core is not DuckStation, it is a broken fork, and has nothing to do with us.
 
