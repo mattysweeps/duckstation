@@ -7668,8 +7668,8 @@ Are you sure you want to continue?</source>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2785"/>
-        <source>&lt;p&gt;Sorry, you are trying to update a DuckStation version which is not an official GitHub release. To prevent incompatibilities, the auto-updater is only enabled on official builds.&lt;/p&gt;&lt;p&gt;To obtain an official build, please follow the instructions under &quot;Downloading and Running&quot; at the link below:&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/stenzek/duckstation/&quot;&gt;https://github.com/stenzek/duckstation/&lt;/a&gt;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;申し訳ありませんが、GitHub の公式リリースではない DuckStation バージョンを更新しようとしています。非互換性を防ぐために、自動更新は公式ビルドでのみ有効になっています。&lt;/p&gt;&lt;p&gt;公式ビルドを取得するには、以下のリンクの「ダウンロードと実行」の手順に従ってください。&lt;/p&gt;&lt;p&gt; &lt;a href=&quot;https://github.com/stenzek/duckstation/&quot;&gt; https://github.com/stenzek/duckstation/ &lt;/a&gt;&lt;/p&gt;</translation>
+        <source>&lt;p&gt;Sorry, you are trying to update a DuckStation version which is not an official GitHub release. To prevent incompatibilities, the auto-updater is only enabled on official builds.&lt;/p&gt;&lt;p&gt;To obtain an official build, please follow the instructions under &quot;Downloading and Running&quot; at the link below:&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/mattysweeps/duckstation/&quot;&gt;https://github.com/mattysweeps/duckstation/&lt;/a&gt;&lt;/p&gt;</source>
+        <translation>&lt;p&gt;申し訳ありませんが、GitHub の公式リリースではない DuckStation バージョンを更新しようとしています。非互換性を防ぐために、自動更新は公式ビルドでのみ有効になっています。&lt;/p&gt;&lt;p&gt;公式ビルドを取得するには、以下のリンクの「ダウンロードと実行」の手順に従ってください。&lt;/p&gt;&lt;p&gt; &lt;a href=&quot;https://github.com/mattysweeps/duckstation/&quot;&gt; https://github.com/mattysweeps/duckstation/ &lt;/a&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2791"/>
