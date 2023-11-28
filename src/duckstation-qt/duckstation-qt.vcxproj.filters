@@ -186,6 +186,8 @@
     <ClCompile Include="$(IntDir)moc_setupwizarddialog.cpp">
       <Filter>moc</Filter>
     </ClCompile>
+    <ClCompile Include="$(IntDir)moc_logwindow.cpp" />
+    <ClCompile Include="megamandebugwindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="qtutils.h" />
@@ -193,6 +195,7 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="controllersettingwidgetbinder.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="megamandebugwindow.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="resources">
@@ -314,6 +317,7 @@
     <None Include="translations\duckstation-qt_es-es.ts">
       <Filter>translations</Filter>
     </None>
+    <None Include="megamandebugwindow.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtTs Include="translations\duckstation-qt_de.ts">

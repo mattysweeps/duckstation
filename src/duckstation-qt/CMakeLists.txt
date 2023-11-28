@@ -123,6 +123,9 @@ set(SRCS
   memorycardsettingswidget.h
   memoryviewwidget.cpp
   memoryviewwidget.h
+  megamandebugwindow.cpp
+  megamandebugwindow.h
+  megamandebugwindow.ui
   postprocessingsettingswidget.cpp
   postprocessingsettingswidget.h
   postprocessingsettingswidget.ui

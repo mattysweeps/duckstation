@@ -1,0 +1,1391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MegaManDebugWindow</class>
+ <widget class="QMainWindow" name="MegaManDebugWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>783</width>
+    <height>677</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Mega Man Debug Window</string>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>900</width>
+      <height>641</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="megaManTab">
+     <attribute name="title">
+      <string>Mega Man</string>
+     </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>160</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="setHealthButton">
+         <property name="text">
+          <string>Set Health</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="setHealthValue"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>150</y>
+        <width>291</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="roomJumpLayout">
+       <item>
+        <layout class="QHBoxLayout" name="roomJumpSelectLayout">
+         <item>
+          <widget class="QLabel" name="roomJumpLabel">
+           <property name="text">
+            <string>Room</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="roomJumpComboBox"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="subroomJumpSelectLayout">
+         <item>
+          <widget class="QLabel" name="subRoomJumpLabel">
+           <property name="text">
+            <string>Subroom</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="subRoomJumpComboBox"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="roomJumpButton">
+         <property name="text">
+          <string>Jump</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="normalItemsTab">
+     <attribute name="title">
+      <string>Normal Items</string>
+     </attribute>
+     <widget class="QLabel" name="normalItemObtainedLabel">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Inventory</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="normalItemObtainedList">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>131</width>
+        <height>192</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="normalItemsUnobtainedLabel">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>0</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Other Items</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="normalItemUnobtainedList">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>20</y>
+        <width>131</width>
+        <height>192</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="normalItemRemoveButton">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&gt; Remove</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="normalItemAddButton">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>220</y>
+        <width>81</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt; Add</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="specialItemsTab">
+     <attribute name="title">
+      <string>Special Items</string>
+     </attribute>
+     <widget class="QWidget" name="horizontalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>900</width>
+        <height>600</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <layout class="QVBoxLayout" name="specialItemEnergyCanteenLayout">
+         <item>
+          <widget class="QLabel" name="specialItemEnergyCanteenLabel">
+           <property name="text">
+            <string>Energy Canteen</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="specialItemEnergyCanteenCheckBox"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="specialItemEnergyCanteenCurrentValueLabel">
+           <property name="text">
+            <string>Current Value</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="specialItemEnergyCanteenCurrentValue"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="specialItemEnergyCanteenMaxValueLabel">
+           <property name="text">
+            <string>Max Value</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="specialItemEnergyCanteenMaxValue"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="specialItemEnergyCanteenUpdateButton">
+           <property name="text">
+            <string>Update Canteen</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <layout class="QHBoxLayout" name="specialItemBlueRefractorLayout">
+         <item>
+          <widget class="QLabel" name="specialItemBlueRefractorLabel">
+           <property name="text">
+            <string>Blue Refractor</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="specialItemBlueRefractorCheckBox"/>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="0">
+        <layout class="QHBoxLayout" name="specialItemWalkieTalkieLayout">
+         <item>
+          <widget class="QLabel" name="specialItemWalkieTalkieLabel">
+           <property name="text">
+            <string>Walkie-Talkie</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="specialItemWalkieTalkieCheckBox"/>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="1">
+        <layout class="QVBoxLayout" name="specialItemHelmetLayout">
+         <item>
+          <layout class="QHBoxLayout" name="specialItemHelmetLayout1">
+           <item>
+            <widget class="QLabel" name="specialItemHelmetLabel">
+             <property name="text">
+              <string>Helmet</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="specialItemHelmetCheckBox"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="specialItemHelmetLayout2">
+           <item>
+            <widget class="QLabel" name="specialItemHelmetEquipLabel">
+             <property name="text">
+              <string>Equip</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="specialItemHelmetEquipCheckBox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="1">
+        <layout class="QHBoxLayout" name="specialItemYellowRefractorLayout">
+         <item>
+          <widget class="QLabel" name="specialItemYellowRefractorLabel">
+           <property name="text">
+            <string>Yellow Refractor</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="specialItemYellowRefractorCheckBox"/>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_9">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="1">
+        <layout class="QHBoxLayout" name="specialItemBonneKeyLayout">
+         <item>
+          <widget class="QLabel" name="specialItemBonneKeyLabel">
+           <property name="text">
+            <string>Bonne Family Key</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="specialItemBonneKeyCheckBox"/>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="2">
+        <layout class="QVBoxLayout" name="specialItemJetSkatesLayout">
+         <item>
+          <layout class="QHBoxLayout" name="specialItemJetSkatesLayout1">
+           <item>
+            <widget class="QLabel" name="specialItemJetSkatesLabel">
+             <property name="text">
+              <string>Jet Skates</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="specialItemJetSkatesCheckBox"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="specialItemJetSkatesLayout2">
+           <item>
+            <widget class="QLabel" name="specialItemJetSkatesEquipLabel">
+             <property name="text">
+              <string>Equip</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="specialItemJetSkatesEquipCheckBox"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="2">
+        <layout class="QHBoxLayout" name="specialItemRedRefractorLayout">
+         <item>
+          <widget class="QLabel" name="specialItemRedRefractorLabel">
+           <property name="text">
+            <string>Red Refractor</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="specialItemRedRefractorCheckBox"/>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="2">
+        <layout class="QVBoxLayout" name="specialItemsCardonKeysLayout">
+         <item>
+          <widget class="QLabel" name="specialItemCardonKeysLabel">
+           <property name="text">
+            <string>
+                          Cardon Forest
+                          Sub-Gate Key
+                        </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="specialItemCardonForestCount">
+           <item>
+            <property name="text">
+             <string>0 (Remove)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>3</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="3">
+        <layout class="QVBoxLayout" name="specialItemJumpSpringsLayout">
+         <item>
+          <layout class="QHBoxLayout" name="specialItemJumpSpringsLayout1">
+           <item>
+            <widget class="QLabel" name="specialItemJumpSpringsLabel">
+             <property name="text">
+              <string>Jump Springs</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="specialItemJumpSpringsCheckBox"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="specialItemJumpSpringsLayout2">
+           <item>
+            <widget class="QLabel" name="specialItemJumpSpringsEquipLabel">
+             <property name="text">
+              <string>Equip</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="specialItemJumpSpringsEquipCheckBox"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="3">
+        <layout class="QHBoxLayout" name="specialItemCitizensCardLayout">
+         <item>
+          <widget class="QLabel" name="specialItemCitizensCardLabel">
+           <property name="text">
+            <string>Citizen's Card</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="specialItemCitizensCardCheckBox"/>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_8">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="3">
+        <layout class="QVBoxLayout" name="specialItemLakeKeysLayout">
+         <item>
+          <widget class="QLabel" name="specialItemLakeJyunKeysLabel">
+           <property name="text">
+            <string>
+                          Lake Jyun
+                          Sub-Gate Key
+                        </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="specialItemLakeJyunKeysCount">
+           <item>
+            <property name="text">
+             <string>0 (Remove)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>3</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="4">
+        <layout class="QVBoxLayout" name="specialItemArmorJacketLayout">
+         <item>
+          <layout class="QVBoxLayout" name="specialItemArmorJacketLayout1">
+           <item>
+            <widget class="QLabel" name="specialItemArmorJacketLabel">
+             <property name="text">
+              <string>Armor Jacket</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="specialItemArmorJacketCount">
+             <item>
+              <property name="text">
+               <string>None (Remove)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Flak Jacket</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Kevlar Jacket</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Kevlar Jacket Omega</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="specialItemArmorJacketLayout2">
+           <item>
+            <widget class="QLabel" name="specialItemArmorJacketEquipLabel">
+             <property name="text">
+              <string>Equip</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="specialItemArmorJacketEquipCheckBox"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="4">
+        <layout class="QHBoxLayout" name="specialItemClassALicenseLayout">
+         <item>
+          <widget class="QLabel" name="specialItemClassALicenseLabel">
+           <property name="text">
+            <string>Class A License</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="specialItemClassALicenseCheckBox"/>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="4">
+        <layout class="QVBoxLayout" name="specialItemClozerKeysLayout">
+         <item>
+          <widget class="QLabel" name="specialItemClozerKeysLabel">
+           <property name="text">
+            <string>
+                          Clozer Woods
+                          Sub-Gate Key
+                        </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="specialItemClozerKeysCount">
+           <item>
+            <property name="text">
+             <string>0 (Remove)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>3</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="5">
+        <layout class="QHBoxLayout" name="specialItemAdapterPlugLayout">
+         <item>
+          <widget class="QLabel" name="specialItemAdapterPlugLabel">
+           <property name="text">
+            <string>Adapter Plug</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="specialItemAdapterPlugCheckBox"/>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="5">
+        <layout class="QHBoxLayout" name="specialItemClassBLicenseLayout">
+         <item>
+          <widget class="QLabel" name="specialItemClassBLicenseLabel">
+           <property name="text">
+            <string>Class B License</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="specialItemClassBLicenseCheckBox"/>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="5">
+        <layout class="QVBoxLayout" name="specialItemSubCityKeysLayout">
+         <item>
+          <widget class="QLabel" name="specialItemSubCityKeysLabel">
+           <property name="text">
+            <string>Sub-City Key</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="specialItemSubCityKeysCount">
+           <item>
+            <property name="text">
+             <string>0 (Remove)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>3</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="busterPartsTab">
+     <attribute name="title">
+      <string>Buster Parts</string>
+     </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>900</width>
+        <height>611</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="busterPartsLayout">
+       <item>
+        <layout class="QHBoxLayout" name="busterPartsEquippedLayout">
+         <item>
+          <layout class="QVBoxLayout" name="busterPartsEquippedPartsLayout">
+           <item>
+            <widget class="QComboBox" name="busterPartsSlot1ComboBox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <item>
+              <property name="text">
+               <string>0x00 Blank</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsSlot2ComboBox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <item>
+              <property name="text">
+               <string>0x00 Blank</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsSlot3ComboBox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <item>
+              <property name="text">
+               <string>0x00 Blank</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="busterPartsEquippedValuesLayout">
+           <item>
+            <widget class="QCheckBox" name="busterPartsManuallyChangeValuesCheckBox">
+             <property name="text">
+              <string>Manually Set Buster Values</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="busterPartsEquippedValuesAttackLayout">
+             <item>
+              <widget class="QLabel" name="busterPartsEquippedValuesAttackLabel">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Attack</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="busterPartsEquippedValuesAttackValue">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="busterPartsEquippedValuesAttackMaxValue">
+               <property name="text">
+                <string>/ 7</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="busterPartsEquippedValuesEnergyLayout">
+             <item>
+              <widget class="QLabel" name="busterPartsEquippedValuesEnergyLabel">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Energy</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="busterPartsEquippedValuesEnergyValue">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="busterPartsEquippedValuesEnergyMaxValue">
+               <property name="text">
+                <string>/ 7</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="busterPartsEquippedValuesRangeLayout">
+             <item>
+              <widget class="QLabel" name="busterPartsEquippedValuesRangeLabel">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Range</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="busterPartsEquippedValuesRangeValue">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="busterPartsEquippedValuesRangeMaxValue">
+               <property name="text">
+                <string>/ 7</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="busterPartsEquippedValuesRapidLayout">
+             <item>
+              <widget class="QLabel" name="busterPartsEquippedValuesRapidLabel">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Rapid</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="busterPartsEquippedValuesRapidValue">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="busterPartsEquippedValuesRapidMaxValue">
+               <property name="text">
+                <string>/ 4</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="busterPartsInventoryLayout">
+         <item>
+          <layout class="QVBoxLayout" name="busterPartsInventoryLayoutLeft">
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot0"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot2"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot4"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot6"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot8"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot10"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot12"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot14"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot16"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot18"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot20"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot22"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot24"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot26"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot28"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot30"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="busterPartsInventoryLayoutRight">
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot1"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot3"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot5"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot7"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot9"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot11"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot13"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot15"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot17"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot19"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot21"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot23"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot25"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot27"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot29"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="busterPartsInventorySlot31"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="specialWeaponsTab">
+     <attribute name="title">
+      <string>Page</string>
+     </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>90</y>
+        <width>441</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Ammo</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Attack</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Energy</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>Range</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>Rapid</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>Special</string>
+             </property>
+            </widget>
+           </item>
+           
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+              <widget class="QCheckBox" name="specialWeaponActiveBusterCheckBox">
+                <property name="text">
+                  <string>Active Buster</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QCheckBox" name="specialWeaponBladeArmCheckBox">
+                <property name="text">
+                  <string>Blade Arm</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QCheckBox" name="specialWeaponGrandGrenadeCheckBox">
+                <property name="text">
+                  <string>Grand Grenade</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QCheckBox" name="specialWeaponSplashMineCheckBox">
+                <property name="text">
+                  <string>Splash Mine</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QCheckBox" name="specialWeaponShieldArmCheckBox">
+                <property name="text">
+                  <string>Shield Arm</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QCheckBox" name="specialWeaponShiningLaserCheckBox">
+                <property name="text">
+                  <string>Shining Laser</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QCheckBox" name="specialWeaponUnused1CheckBox">
+                <property name="text">
+                  <string>(unused)</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QCheckBox" name="specialWeaponUnused2CheckBox">
+                <property name="text">
+                  <string>(unused)</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QCheckBox" name="specialWeaponNormalArmCheckBox">
+                <property name="text">
+                  <string>Normal Arm</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QCheckBox" name="specialWeaponUnused3CheckBox">
+                <property name="text">
+                  <string>(unused)</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QCheckBox" name="specialWeaponMachineBusterCheckBox">
+                <property name="text">
+                  <string>Machine Buster</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QCheckBox" name="specialWeaponPoweredBusterCheckBox">
+                <property name="text">
+                  <string>Powered Buster</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QCheckBox" name="specialWeaponDrillArmCheckBox">
+                <property name="text">
+                  <string>Drill Arm</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QCheckBox" name="specialWeaponGrenadeArmCheckBox">
+                <property name="text">
+                  <string>Grenade Arm</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QCheckBox" name="specialWeaponSpreadBusterCheckBox">
+                <property name="text">
+                  <string>Spread Buster</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QCheckBox" name="specialWeaponVacuumArmCheckBox">
+                <property name="text">
+                  <string>Vacuum Arm</string>
+                </property>
+              </widget>
+            </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Equipped Item</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionPause"/>
+  </widget>
+  <action name="actionPause">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/media-playback-pause.png</normaloff>:/icons/media-playback-pause.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pause/Continue</string>
+   </property>
+   <property name="toolTip">
+    <string>&amp;Pause/Continue</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

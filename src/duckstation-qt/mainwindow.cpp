@@ -8,6 +8,7 @@
 #include "cheatmanagerdialog.h"
 #include "coverdownloaddialog.h"
 #include "debuggerwindow.h"
+#include "megamandebugwindow.h"
 #include "displaywidget.h"
 #include "gamelistsettingswidget.h"
 #include "gamelistwidget.h"
@@ -129,6 +130,7 @@ MainWindow::~MainWindow()
 {
   Assert(!m_display_widget);
   Assert(!m_debugger_window);
+  Assert(!m_mega_man_debug_window);
   cancelGameListRefresh();
   destroySubWindows();
 
@@ -613,6 +615,12 @@ void MainWindow::onSystemDestroyed()
   {
     delete m_debugger_window;
     m_debugger_window = nullptr;
+  }
+
+  if (m_mega_man_debug_window)
+  {
+    delete m_mega_man_debug_window;
+    m_mega_man_debug_window = nullptr;
   }
 }
 
@@ -1732,6 +1740,7 @@ void MainWindow::updateEmulationActions(bool starting, bool running, bool cheevo
   m_ui.menuCheats->setDisabled(starting || !running || cheevos_challenge_mode);
   m_ui.actionCheatManager->setDisabled(starting || !running || cheevos_challenge_mode);
   m_ui.actionCPUDebugger->setDisabled(starting || !running || cheevos_challenge_mode);
+  m_ui.actionMegaManDebugWindow->setDisabled(starting || !running || cheevos_challenge_mode);
   m_ui.actionDumpRAM->setDisabled(starting || !running || cheevos_challenge_mode);
   m_ui.actionDumpVRAM->setDisabled(starting || !running || cheevos_challenge_mode);
   m_ui.actionDumpSPURAM->setDisabled(starting || !running || cheevos_challenge_mode);
@@ -2025,6 +2034,7 @@ void MainWindow::connectSignals()
   connect(m_ui.actionCoverDownloader, &QAction::triggered, this, &MainWindow::onToolsCoverDownloaderTriggered);
   connect(m_ui.actionCheatManager, &QAction::triggered, this, &MainWindow::onToolsCheatManagerTriggered);
   connect(m_ui.actionCPUDebugger, &QAction::triggered, this, &MainWindow::openCPUDebugger);
+  connect(m_ui.actionMegaManDebugWindow, &QAction::triggered, this, &MainWindow::openMegaManDebugWindow);
   SettingWidgetBinder::BindWidgetToBoolSetting(nullptr, m_ui.actionEnableGDBServer, "Debug", "EnableGDBServer", false);
   connect(m_ui.actionOpenDataDirectory, &QAction::triggered, this, &MainWindow::onToolsOpenDataDirectoryTriggered);
   connect(m_ui.actionGridViewShowTitles, &QAction::triggered, m_game_list_widget, &GameListWidget::setShowCoverTitles);
@@ -2115,6 +2125,7 @@ void MainWindow::connectSignals()
   });
   SettingWidgetBinder::BindWidgetToBoolSetting(nullptr, m_ui.actionDebugShowVRAM, "Debug", "ShowVRAM", false);
   SettingWidgetBinder::BindWidgetToBoolSetting(nullptr, m_ui.actionDebugShowGPUState, "Debug", "ShowGPUState", false);
+  SettingWidgetBinder::BindWidgetToBoolSetting(nullptr, m_ui.actionDebugShowMegaManState, "Debug", "ShowMegaManState", false);
   SettingWidgetBinder::BindWidgetToBoolSetting(nullptr, m_ui.actionDebugShowCDROMState, "Debug", "ShowCDROMState",
                                                false);
   SettingWidgetBinder::BindWidgetToBoolSetting(nullptr, m_ui.actionDebugShowSPUState, "Debug", "ShowSPUState", false);
@@ -2776,6 +2787,13 @@ void MainWindow::onAchievementsChallengeModeChanged(bool enabled)
       delete m_debugger_window;
       m_debugger_window = nullptr;
     }
+
+    if (m_mega_man_debug_window)
+    {
+      m_mega_man_debug_window->close();
+      delete m_mega_man_debug_window;
+      m_mega_man_debug_window = nullptr;
+    }
   }
 
   updateEmulationActions(false, System::IsValid(), enabled);
@@ -2852,6 +2870,29 @@ void MainWindow::onCPUDebuggerClosed()
   Assert(m_debugger_window);
   m_debugger_window->deleteLater();
   m_debugger_window = nullptr;
+}
+
+void MainWindow::openMegaManDebugWindow()
+{
+  if (!System::IsValid())
+    return;
+
+  Assert(!m_mega_man_debug_window);
+
+  m_mega_man_debug_window = new MegaManDebugWindow();
+  m_mega_man_debug_window->setWindowIcon(windowIcon());
+  connect(m_mega_man_debug_window, &MegaManDebugWindow::closed, this, &MainWindow::onMegaManDebugWindowClosed);
+  m_mega_man_debug_window->show();
+
+  // the debugger will miss the pause event above (or we were already paused), so fire it now
+  m_mega_man_debug_window->onEmulationPaused();
+}
+
+void MainWindow::onMegaManDebugWindowClosed()
+{
+  Assert(m_mega_man_debug_window);
+  m_mega_man_debug_window->deleteLater();
+  m_mega_man_debug_window = nullptr;
 }
 
 void MainWindow::onToolsOpenDataDirectoryTriggered()

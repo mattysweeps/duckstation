@@ -206,6 +206,7 @@ struct Settings
 
     // Mutable because the imgui window can close itself.
     mutable bool show_gpu_state = false;
+    mutable bool show_mega_man_state = false;
     mutable bool show_cdrom_state = false;
     mutable bool show_spu_state = false;
     mutable bool show_timers_state = false;

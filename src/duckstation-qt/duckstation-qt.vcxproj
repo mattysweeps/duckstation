@@ -31,6 +31,7 @@
     <ClCompile Include="inputbindingdialog.cpp" />
     <ClCompile Include="inputbindingwidgets.cpp" />
     <ClCompile Include="logwindow.cpp" />
+    <ClCompile Include="megamandebugwindow.cpp" />
     <ClCompile Include="memoryviewwidget.cpp" />
     <ClCompile Include="displaywidget.cpp" />
     <ClCompile Include="gamelistsettingswidget.cpp" />
@@ -88,6 +89,7 @@
     <ClInclude Include="controllersettingwidgetbinder.h" />
     <QtMoc Include="memoryviewwidget.h" />
     <QtMoc Include="logwindow.h" />
+    <QtMoc Include="megamandebugwindow.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="settingwidgetbinder.h" />
@@ -218,6 +220,9 @@
     <QtUi Include="coverdownloaddialog.ui">
       <FileType>Document</FileType>
     </QtUi>
+    <QtUi Include="megamandebugwindow.ui">
+      <FileType>Document</FileType>
+    </QtUi>
   </ItemGroup>
   <ItemGroup>
     <QtResource Include="resources\resources.qrc">
@@ -264,6 +269,7 @@
     <ClCompile Include="$(IntDir)moc_mainwindow.cpp" />
     <ClCompile Include="$(IntDir)moc_memorycardsettingswidget.cpp" />
     <ClCompile Include="$(IntDir)moc_memorycardeditorwindow.cpp" />
+    <ClCompile Include="$(IntDir)moc_megamandebugwindow.cpp" />
     <ClCompile Include="$(IntDir)moc_memoryviewwidget.cpp" />
     <ClCompile Include="$(IntDir)moc_postprocessingsettingswidget.cpp" />
     <ClCompile Include="$(IntDir)moc_qthost.cpp" />

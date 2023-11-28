@@ -13,6 +13,7 @@
 #include "settings.h"
 #include "spu.h"
 #include "system.h"
+#include "megaman.h"
 
 #include "util/audio_stream.h"
 #include "util/gpu_device.h"
@@ -212,6 +213,8 @@ void ImGuiManager::RenderDebugWindows()
   {
     if (g_settings.debugging.show_gpu_state)
       g_gpu->DrawDebugStateWindow();
+    if (g_settings.debugging.show_mega_man_state)
+      MegaMan::DrawDebugStateWindow();
     if (g_settings.debugging.show_cdrom_state)
       CDROM::DrawDebugWindow();
     if (g_settings.debugging.show_timers_state)

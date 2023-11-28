@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>746</width>
     <height>655</height>
    </rect>
   </property>
@@ -29,8 +29,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>21</height>
+     <width>746</width>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuSystem">
@@ -42,8 +42,7 @@
       <string>Change Disc</string>
      </property>
      <property name="icon">
-      <iconset theme="disc-line">
-       <normaloff>.</normaloff>.</iconset>
+      <iconset theme="disc-line"/>
      </property>
      <actiongroup name="actionGroupChangeDiscSubImages"/>
      <addaction name="actionChangeDiscFromFile"/>
@@ -57,8 +56,7 @@
       <string>Cheats</string>
      </property>
      <property name="icon">
-      <iconset theme="cheats-line">
-       <normaloff>.</normaloff>.</iconset>
+      <iconset theme="cheats-line"/>
      </property>
     </widget>
     <widget class="QMenu" name="menuLoadState">
@@ -66,8 +64,7 @@
       <string>Load State</string>
      </property>
      <property name="icon">
-      <iconset theme="folder-open-line">
-       <normaloff>.</normaloff>.</iconset>
+      <iconset theme="folder-open-line"/>
      </property>
     </widget>
     <widget class="QMenu" name="menuSaveState">
@@ -75,8 +72,7 @@
       <string>Save State</string>
      </property>
      <property name="icon">
-      <iconset theme="save-3-line">
-       <normaloff>.</normaloff>.</iconset>
+      <iconset theme="save-3-line"/>
      </property>
     </widget>
     <addaction name="actionStartFile"/>
@@ -108,8 +104,7 @@
       <string>Theme</string>
      </property>
      <property name="icon">
-      <iconset theme="paint-brush-line">
-       <normaloff>.</normaloff>.</iconset>
+      <iconset theme="paint-brush-line"/>
      </property>
     </widget>
     <widget class="QMenu" name="menuSettingsLanguage">
@@ -117,8 +112,7 @@
       <string>Language</string>
      </property>
      <property name="icon">
-      <iconset theme="global-line">
-       <normaloff>.</normaloff>.</iconset>
+      <iconset theme="global-line"/>
      </property>
     </widget>
     <addaction name="actionViewGameProperties"/>
@@ -189,6 +183,7 @@
     <addaction name="separator"/>
     <addaction name="actionCPUDebugger"/>
     <addaction name="actionEnableGDBServer"/>
+    <addaction name="actionMegaManDebugWindow"/>
     <addaction name="separator"/>
     <addaction name="actionDumpRAM"/>
     <addaction name="actionDumpVRAM"/>
@@ -200,6 +195,7 @@
     <addaction name="separator"/>
     <addaction name="actionDebugShowVRAM"/>
     <addaction name="actionDebugShowGPUState"/>
+    <addaction name="actionDebugShowMegaManState"/>
     <addaction name="actionDebugShowCDROMState"/>
     <addaction name="actionDebugShowSPUState"/>
     <addaction name="actionDebugShowTimersState"/>
@@ -288,8 +284,7 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionStartFile">
    <property name="icon">
-    <iconset theme="file-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="file-line"/>
    </property>
    <property name="text">
     <string>Start &amp;File...</string>
@@ -297,8 +292,7 @@
   </action>
   <action name="actionStartDisc">
    <property name="icon">
-    <iconset theme="disc-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="disc-line"/>
    </property>
    <property name="text">
     <string>Start &amp;Disc...</string>
@@ -306,8 +300,7 @@
   </action>
   <action name="actionStartBios">
    <property name="icon">
-    <iconset theme="chip-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="chip-line"/>
    </property>
    <property name="text">
     <string>Start &amp;BIOS</string>
@@ -315,8 +308,7 @@
   </action>
   <action name="actionScanForNewGames">
    <property name="icon">
-    <iconset theme="file-search-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="file-search-line"/>
    </property>
    <property name="text">
     <string>&amp;Scan For New Games</string>
@@ -324,8 +316,7 @@
   </action>
   <action name="actionRescanAllGames">
    <property name="icon">
-    <iconset theme="refresh-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="refresh-line"/>
    </property>
    <property name="text">
     <string>&amp;Rescan All Games</string>
@@ -333,8 +324,7 @@
   </action>
   <action name="actionPowerOff">
    <property name="icon">
-    <iconset theme="shut-down-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="shut-down-line"/>
    </property>
    <property name="text">
     <string>Power &amp;Off</string>
@@ -342,8 +332,7 @@
   </action>
   <action name="actionReset">
    <property name="icon">
-    <iconset theme="restart-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="restart-line"/>
    </property>
    <property name="text">
     <string>&amp;Reset</string>
@@ -354,8 +343,7 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset theme="pause-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="pause-line"/>
    </property>
    <property name="text">
     <string>&amp;Pause</string>
@@ -363,8 +351,7 @@
   </action>
   <action name="actionLoadState">
    <property name="icon">
-    <iconset theme="folder-open-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="folder-open-line"/>
    </property>
    <property name="text">
     <string>&amp;Load State</string>
@@ -372,8 +359,7 @@
   </action>
   <action name="actionSaveState">
    <property name="icon">
-    <iconset theme="save-3-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="save-3-line"/>
    </property>
    <property name="text">
     <string>&amp;Save State</string>
@@ -381,8 +367,7 @@
   </action>
   <action name="actionExit">
    <property name="icon">
-    <iconset theme="door-open-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="door-open-line"/>
    </property>
    <property name="text">
     <string>E&amp;xit</string>
@@ -390,8 +375,7 @@
   </action>
   <action name="actionBIOSSettings">
    <property name="icon">
-    <iconset theme="chip-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="chip-line"/>
    </property>
    <property name="text">
     <string>B&amp;IOS</string>
@@ -399,8 +383,7 @@
   </action>
   <action name="actionConsoleSettings">
    <property name="icon">
-    <iconset theme="chip-2-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="chip-2-line"/>
    </property>
    <property name="text">
     <string>C&amp;onsole</string>
@@ -408,8 +391,7 @@
   </action>
   <action name="actionEmulationSettings">
    <property name="icon">
-    <iconset theme="emulation-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="emulation-line"/>
    </property>
    <property name="text">
     <string>E&amp;mulation</string>
@@ -417,8 +399,7 @@
   </action>
   <action name="actionControllerSettings">
    <property name="icon">
-    <iconset theme="controller-digital-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="controller-digital-line"/>
    </property>
    <property name="text">
     <string>&amp;Controllers</string>
@@ -426,8 +407,7 @@
   </action>
   <action name="actionHotkeySettings">
    <property name="icon">
-    <iconset theme="keyboard-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="keyboard-line"/>
    </property>
    <property name="text">
     <string>&amp;Hotkeys</string>
@@ -435,8 +415,7 @@
   </action>
   <action name="actionDisplaySettings">
    <property name="icon">
-    <iconset theme="image-fill">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="image-fill"/>
    </property>
    <property name="text">
     <string>&amp;Display</string>
@@ -444,8 +423,7 @@
   </action>
   <action name="actionEnhancementSettings">
    <property name="icon">
-    <iconset theme="sparkle-fill">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="sparkle-fill"/>
    </property>
    <property name="text">
     <string>&amp;Enhancements</string>
@@ -453,8 +431,7 @@
   </action>
   <action name="actionPostProcessingSettings">
    <property name="icon">
-    <iconset theme="sun-fill">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="sun-fill"/>
    </property>
    <property name="text">
     <string>&amp;Post-Processing</string>
@@ -462,8 +439,7 @@
   </action>
   <action name="actionFullscreen">
    <property name="icon">
-    <iconset theme="fullscreen-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="fullscreen-line"/>
    </property>
    <property name="text">
     <string>Fullscreen</string>
@@ -503,8 +479,7 @@
   </action>
   <action name="actionCheckForUpdates">
    <property name="icon">
-    <iconset theme="download-2-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="download-2-line"/>
    </property>
    <property name="text">
     <string>Check for &amp;Updates...</string>
@@ -535,8 +510,7 @@
   </action>
   <action name="actionChangeDisc">
    <property name="icon">
-    <iconset theme="disc-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="disc-line"/>
    </property>
    <property name="text">
     <string>Change Disc...</string>
@@ -544,8 +518,7 @@
   </action>
   <action name="actionCheats">
    <property name="icon">
-    <iconset theme="cheats-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="cheats-line"/>
    </property>
    <property name="text">
     <string>Cheats...</string>
@@ -553,8 +526,7 @@
   </action>
   <action name="actionAudioSettings">
    <property name="icon">
-    <iconset theme="volume-up-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="volume-up-line"/>
    </property>
    <property name="text">
     <string>Audio</string>
@@ -562,8 +534,7 @@
   </action>
   <action name="actionAchievementSettings">
    <property name="icon">
-    <iconset theme="trophy-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="trophy-line"/>
    </property>
    <property name="text">
     <string>Achievements</string>
@@ -571,8 +542,7 @@
   </action>
   <action name="actionFolderSettings">
    <property name="icon">
-    <iconset theme="folder-open-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="folder-open-line"/>
    </property>
    <property name="text">
     <string>Folders</string>
@@ -580,8 +550,7 @@
   </action>
   <action name="actionGameListSettings">
    <property name="icon">
-    <iconset theme="folder-open-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="folder-open-line"/>
    </property>
    <property name="text">
     <string>Game List</string>
@@ -589,8 +558,7 @@
   </action>
   <action name="actionGeneralSettings">
    <property name="icon">
-    <iconset theme="settings-3-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="settings-3-line"/>
    </property>
    <property name="text">
     <string>General</string>
@@ -598,8 +566,7 @@
   </action>
   <action name="actionAdvancedSettings">
    <property name="icon">
-    <iconset theme="tools-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="tools-line"/>
    </property>
    <property name="text">
     <string>Advanced</string>
@@ -607,8 +574,7 @@
   </action>
   <action name="actionAddGameDirectory">
    <property name="icon">
-    <iconset theme="folder-add-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="folder-add-line"/>
    </property>
    <property name="text">
     <string>Add Game Directory...</string>
@@ -616,8 +582,7 @@
   </action>
   <action name="actionSettings">
    <property name="icon">
-    <iconset theme="settings-3-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="settings-3-line"/>
    </property>
    <property name="text">
     <string>&amp;Settings</string>
@@ -628,8 +593,7 @@
   </action>
   <action name="actionSettings2">
    <property name="icon">
-    <iconset theme="settings-3-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="settings-3-line"/>
    </property>
    <property name="text">
     <string>&amp;Settings</string>
@@ -747,6 +711,14 @@
     <string>Show GPU State</string>
    </property>
   </action>
+  <action name="actionDebugShowMegaManState">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show Mega Man State</string>
+   </property>
+  </action>
   <action name="actionDebugShowCDROMState">
    <property name="checkable">
     <bool>true</bool>
@@ -789,8 +761,7 @@
   </action>
   <action name="actionScreenshot">
    <property name="icon">
-    <iconset theme="screenshot-2-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="screenshot-2-line"/>
    </property>
    <property name="text">
     <string>&amp;Screenshot</string>
@@ -798,8 +769,7 @@
   </action>
   <action name="actionMemoryCardSettings">
    <property name="icon">
-    <iconset theme="memcard-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="memcard-line"/>
    </property>
    <property name="text">
     <string>&amp;Memory Cards</string>
@@ -807,8 +777,7 @@
   </action>
   <action name="actionResumeLastState">
    <property name="icon">
-    <iconset theme="play-circle-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="play-circle-line"/>
    </property>
    <property name="text">
     <string>Resume</string>
@@ -852,8 +821,7 @@
   </action>
   <action name="actionViewGameList">
    <property name="icon">
-    <iconset theme="list-check">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="list-check"/>
    </property>
    <property name="text">
     <string>Game &amp;List</string>
@@ -872,8 +840,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="file-settings-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="file-settings-line"/>
    </property>
    <property name="text">
     <string>Game &amp;Properties</string>
@@ -904,8 +871,7 @@
   </action>
   <action name="actionViewGameGrid">
    <property name="icon">
-    <iconset theme="function-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="function-line"/>
    </property>
    <property name="text">
     <string>Game &amp;Grid</string>
@@ -955,8 +921,7 @@
   </action>
   <action name="actionPowerOffWithoutSaving">
    <property name="icon">
-    <iconset theme="close-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="close-line"/>
    </property>
    <property name="text">
     <string>Power Off &amp;Without Saving</string>
@@ -964,8 +929,7 @@
   </action>
   <action name="actionStartFullscreenUI">
    <property name="icon">
-    <iconset theme="tv-2-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="tv-2-line"/>
    </property>
    <property name="text">
     <string>Start Big Picture Mode</string>
@@ -973,8 +937,7 @@
   </action>
   <action name="actionStartFullscreenUI2">
    <property name="icon">
-    <iconset theme="tv-2-line">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="tv-2-line"/>
    </property>
    <property name="text">
     <string>Big Picture</string>
@@ -983,6 +946,11 @@
   <action name="actionCoverDownloader">
    <property name="text">
     <string>Cover Downloader</string>
+   </property>
+  </action>
+  <action name="actionMegaManDebugWindow">
+   <property name="text">
+    <string>Mega Man Debug Window</string>
    </property>
   </action>
  </widget>

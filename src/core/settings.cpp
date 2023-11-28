@@ -371,6 +371,7 @@ void Settings::Load(SettingsInterface& si)
   debugging.enable_gdb_server = si.GetBoolValue("Debug", "EnableGDBServer");
   debugging.gdb_server_port = static_cast<u16>(si.GetIntValue("Debug", "GDBServerPort"));
   debugging.show_gpu_state = si.GetBoolValue("Debug", "ShowGPUState");
+  debugging.show_mega_man_state = si.GetBoolValue("Debug", "ShowMegaManState");
   debugging.show_cdrom_state = si.GetBoolValue("Debug", "ShowCDROMState");
   debugging.show_spu_state = si.GetBoolValue("Debug", "ShowSPUState");
   debugging.show_timers_state = si.GetBoolValue("Debug", "ShowTimersState");
@@ -572,6 +573,7 @@ void Settings::Save(SettingsInterface& si) const
   si.SetBoolValue("Debug", "DumpCPUToVRAMCopies", debugging.dump_cpu_to_vram_copies);
   si.SetBoolValue("Debug", "DumpVRAMToCPUCopies", debugging.dump_vram_to_cpu_copies);
   si.SetBoolValue("Debug", "ShowGPUState", debugging.show_gpu_state);
+  si.SetBoolValue("Debug", "ShowMegaManState", debugging.show_mega_man_state);
   si.SetBoolValue("Debug", "ShowCDROMState", debugging.show_cdrom_state);
   si.SetBoolValue("Debug", "ShowSPUState", debugging.show_spu_state);
   si.SetBoolValue("Debug", "ShowTimersState", debugging.show_timers_state);

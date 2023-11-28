@@ -30,6 +30,7 @@ class AutoUpdaterDialog;
 class MemoryCardEditorWindow;
 class CheatManagerDialog;
 class DebuggerWindow;
+class MegaManDebugWindow;
 class MainWindow;
 
 class GPUDevice;
@@ -178,6 +179,9 @@ private Q_SLOTS:
   void openCPUDebugger();
   void onCPUDebuggerClosed();
 
+  void openMegaManDebugWindow();
+  void onMegaManDebugWindowClosed();
+
 protected:
   void showEvent(QShowEvent* event) override;
   void closeEvent(QCloseEvent* event) override;
@@ -287,6 +291,7 @@ private:
   MemoryCardEditorWindow* m_memory_card_editor_window = nullptr;
   CheatManagerDialog* m_cheat_manager_dialog = nullptr;
   DebuggerWindow* m_debugger_window = nullptr;
+  MegaManDebugWindow* m_mega_man_debug_window = nullptr;
 
   bool m_was_paused_by_focus_loss = false;
   bool m_open_debugger_on_start = false;

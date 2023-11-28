@@ -128,7 +128,7 @@ void CPU::WriteToExecutionLog(const char* format, ...)
 {
   if (!s_log_file_opened)
   {
-    s_log_file = FileSystem::OpenCFile("cpu_log.txt", "wb");
+    s_log_file = FileSystem::OpenCFile("X:\cpu_log.txt", "wb");
     s_log_file_opened = true;
   }
 

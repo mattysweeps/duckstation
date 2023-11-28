@@ -73,6 +73,8 @@ add_library(core
   interrupt_controller.h
   mdec.cpp
   mdec.h
+  megaman.cpp
+  megaman.h
   memory_card.cpp
   memory_card.h
   memory_card_image.cpp
