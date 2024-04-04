@@ -6384,7 +6384,7 @@ void FullscreenUI::DrawAboutWindow()
                                  "console, focusing on playability, speed, and long-term maintainability."));
     ImGui::NewLine();
     ImGui::TextWrapped(
-      "%s", FSUI_CSTR("Contributor List: https://github.com/stenzek/duckstation/blob/master/CONTRIBUTORS.md"));
+      "%s", FSUI_CSTR("Contributor List: https://github.com/mattysweeps/duckstation/blob/master/CONTRIBUTORS.md"));
     ImGui::NewLine();
     ImGui::TextWrapped(
       "%s", FSUI_CSTR("Duck icon by icons8 (https://icons8.com/icon/74847/platforms.undefined.short-title)"));
@@ -6397,9 +6397,9 @@ void FullscreenUI::DrawAboutWindow()
 
     BeginMenuButtons();
     if (ActiveButton(FSUI_ICONSTR(ICON_FA_GLOBE, "GitHub Repository"), false))
-      ExitFullscreenAndOpenURL("https://github.com/stenzek/duckstation/");
+      ExitFullscreenAndOpenURL("https://github.com/mattysweeps/duckstation/");
     if (ActiveButton(FSUI_ICONSTR(ICON_FA_BUG, "Issue Tracker"), false))
-      ExitFullscreenAndOpenURL("https://github.com/stenzek/duckstation/issues");
+      ExitFullscreenAndOpenURL("https://github.com/mattysweeps/duckstation/issues");
     if (ActiveButton(FSUI_ICONSTR(ICON_FA_COMMENT, "Discord Server"), false))
       ExitFullscreenAndOpenURL("https://discord.gg/Buktv3t");
 
@@ -6631,7 +6631,7 @@ TRANSLATE_NOOP("FullscreenUI", "Compatibility: ");
 TRANSLATE_NOOP("FullscreenUI", "Configuration");
 TRANSLATE_NOOP("FullscreenUI", "Confirm Power Off");
 TRANSLATE_NOOP("FullscreenUI", "Console Settings");
-TRANSLATE_NOOP("FullscreenUI", "Contributor List: https://github.com/stenzek/duckstation/blob/master/CONTRIBUTORS.md");
+TRANSLATE_NOOP("FullscreenUI", "Contributor List: https://github.com/mattysweeps/duckstation/blob/master/CONTRIBUTORS.md");
 TRANSLATE_NOOP("FullscreenUI", "Controller Port {}");
 TRANSLATE_NOOP("FullscreenUI", "Controller Port {} Macros");
 TRANSLATE_NOOP("FullscreenUI", "Controller Port {} Settings");

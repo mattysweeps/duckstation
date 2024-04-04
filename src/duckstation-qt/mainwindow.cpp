@@ -1396,7 +1396,7 @@ void MainWindow::onViewGamePropertiesActionTriggered()
 
 void MainWindow::onGitHubRepositoryActionTriggered()
 {
-  QtUtils::OpenURL(this, "https://github.com/stenzek/duckstation/");
+  QtUtils::OpenURL(this, "https://github.com/mattysweeps/duckstation/");
 }
 
 void MainWindow::onIssueTrackerActionTriggered()
@@ -3039,7 +3039,7 @@ void MainWindow::checkForUpdates(bool display_message)
            "prevent incompatibilities, the auto-updater is only enabled on official builds.</p>"
            "<p>To obtain an official build, please follow the instructions under \"Downloading and Running\" at the "
            "link below:</p>"
-           "<p><a href=\"https://github.com/stenzek/duckstation/\">https://github.com/stenzek/duckstation/</a></p>");
+           "<p><a href=\"https://github.com/mattysweeps/duckstation/\">https://github.com/mattysweeps/duckstation/</a></p>");
 #else
       message = tr("Automatic updating is not supported on the current platform.");
 #endif
